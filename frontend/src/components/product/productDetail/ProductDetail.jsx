@@ -76,7 +76,7 @@ const ProductDetail = () => {
     }, [isAuthenticated]);
 
     // const ENDPOINT = "https://nghia-store.herokuapp.com";
-    const ENDPOINT = "http://localhost:5000";
+    const ENDPOINT = "https://fashion-store-ildx.onrender.com";
     // const ENDPOINT = "https://store-ndn.herokuapp.com";
     useEffect(() => {
         if (isAuthenticated) {

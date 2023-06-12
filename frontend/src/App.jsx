@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./assets/css/responsive.css"
+import "./assets/css/responsive.css";
 import "./App.css";
 import "./grid.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -40,17 +40,14 @@ import axios from "axios";
 
 import runOneSignal from "./onsignal";
 import OneSignal from "react-onesignal";
-import {
-    deleteOneSignalunSub,
-    postOneSignalSub,
-} from "./api/onesignalController";
+import { deleteOneSignalunSub, postOneSignalSub } from "./api/onesignalController";
 import MeOrder from "./components/my/meOrder/MeOrder";
 import MeNotification from "./components/my/meNotification/MeNotification";
 
 function WrapComponent({ children }) {
     return children;
 }
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://fashion-store-ildx.onrender.com";
 axios.defaults.headers = {
     token: JSON.parse(localStorage.getItem("isAuthenticated")),
 };
@@ -70,9 +67,7 @@ function App() {
     OneSignal.on("subscriptionChange", async function (isSubscribed) {
         isSubscribed
             ? await postOneSignalSub(localStorage.getItem("oneSignalId.bmd"))
-            : await deleteOneSignalunSub(
-                  localStorage.getItem("oneSignalId.bmd")
-              );
+            : await deleteOneSignalunSub(localStorage.getItem("oneSignalId.bmd"));
 
         console.log(isSubscribed);
     });
@@ -84,11 +79,7 @@ function App() {
                     path="/*"
                     element={
                         <WrapComponent>
-                            <ToastContainer
-                                className="Toastify"
-                                position={toast.POSITION.TOP_RIGHT}
-                                autoClose={3000}
-                            />
+                            <ToastContainer className="Toastify" position={toast.POSITION.TOP_RIGHT} autoClose={3000} />
                             {/* <Header /> */}
                             <Router />
                             <Footer />
@@ -99,11 +90,7 @@ function App() {
                     path="me"
                     element={
                         <WrapComponent>
-                            <ToastContainer
-                                className="Toastify"
-                                position={toast.POSITION.TOP_RIGHT}
-                                autoClose={3000}
-                            />
+                            <ToastContainer className="Toastify" position={toast.POSITION.TOP_RIGHT} autoClose={3000} />
                             <Header />
                             <ProtectedRoute isAuthenticated={isAuthenticated}>
                                 {" "}
@@ -123,16 +110,8 @@ function App() {
                     path="dashboard"
                     element={
                         <WrapComponent>
-                            <ToastContainer
-                                className="Toastify"
-                                position={toast.POSITION.TOP_RIGHT}
-                                autoClose={3000}
-                            />
-                            <ProtectedRoute
-                                adminRoute={true}
-                                isAdmin={data}
-                                isAuthenticated={isAuthenticated}
-                            >
+                            <ToastContainer className="Toastify" position={toast.POSITION.TOP_RIGHT} autoClose={3000} />
+                            <ProtectedRoute adminRoute={true} isAdmin={data} isAuthenticated={isAuthenticated}>
                                 {" "}
                                 <Dashboard />{" "}
                             </ProtectedRoute>
@@ -143,71 +122,31 @@ function App() {
                     <Route path="products" element={<DashboardProducts />} />
                     <Route path="users" element={<DashboardUsers />} />
                     <Route path="orders" element={<DashboardOrders />} />
-                    <Route
-                        path="create/product"
-                        element={<DashboardCreateProduct />}
-                    />
-                    <Route
-                        path="update/order/:id"
-                        element={<DashboardUpdateOrder />}
-                    />
-                    <Route
-                        path="update/product/:id"
-                        element={<DashboardUpdateProduct />}
-                    />
-                    <Route
-                        path="update/user/:id"
-                        element={<DashboardUpdateUserRole />}
-                    />
-                    <Route
-                        path="notifications"
-                        element={<DashboardNotifications />}
-                    />
-                    <Route
-                        path="create/notification"
-                        element={<DashBoardCreateNotification />}
-                    />
-                    <Route
-                        path="update/notification/:id"
-                        element={<DashBoardUpdateNotification />}
-                    />
-                    <Route
-                        path="categories"
-                        element={<DashboardCategories />}
-                    />
-                    <Route
-                        path="create/category"
-                        element={<DashBoardCreateCategory />}
-                    />
-                    <Route
-                        path="update/category/:id"
-                        element={<DashBoardUpdateCategory />}
-                    />
+                    <Route path="create/product" element={<DashboardCreateProduct />} />
+                    <Route path="update/order/:id" element={<DashboardUpdateOrder />} />
+                    <Route path="update/product/:id" element={<DashboardUpdateProduct />} />
+                    <Route path="update/user/:id" element={<DashboardUpdateUserRole />} />
+                    <Route path="notifications" element={<DashboardNotifications />} />
+                    <Route path="create/notification" element={<DashBoardCreateNotification />} />
+                    <Route path="update/notification/:id" element={<DashBoardUpdateNotification />} />
+                    <Route path="categories" element={<DashboardCategories />} />
+                    <Route path="create/category" element={<DashBoardCreateCategory />} />
+                    <Route path="update/category/:id" element={<DashBoardUpdateCategory />} />
                 </Route>
                 <Route
                     path="account"
                     element={
                         <WrapComponent>
-                            <ToastContainer
-                                className="Toastify"
-                                position={toast.POSITION.TOP_RIGHT}
-                                autoClose={3000}
-                            />
+                            <ToastContainer className="Toastify" position={toast.POSITION.TOP_RIGHT} autoClose={3000} />
                             <Outlet />
                         </WrapComponent>
                     }
                 >
                     <Route path="login" element={<Login />} />
                     <Route path="register" element={<Register />} />
-                    <Route
-                        path="updatepassword"
-                        element={<MeUpdatePassword />}
-                    />
+                    <Route path="updatepassword" element={<MeUpdatePassword />} />
                     <Route path="password/forgot" element={<Forgot />} />
-                    <Route
-                        path="resetpassword/:token"
-                        element={<ResetPassword />}
-                    />
+                    <Route path="resetpassword/:token" element={<ResetPassword />} />
                 </Route>
             </Routes>
         </BrowserRouter>

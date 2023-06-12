@@ -1,5 +1,5 @@
 import axios from "axios";
-const apiURL = "http://localhost:5000";
+const apiURL = "https://fashion-store-ildx.onrender.com";
 
 const config = {
     headers: {
