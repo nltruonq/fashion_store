@@ -1,0 +1,26 @@
+@use './variable' as *;
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet-width) and (min-width: $mobile-width) {
+        @content;
+    }
+}
+
+@mixin mobileandtablet {
+    @media screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+@mixin overlay($color: #000000, $alpha:0.6){
+    background-color: rgba($color: $color, $alpha: $alpha);
+}
+
+
+
+

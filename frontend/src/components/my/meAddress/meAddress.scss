@@ -1,0 +1,151 @@
+.map-maker {
+    height: 545px;
+
+    .mapboxgl-map {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .wrap-map {
+        height: 80%;
+        width: 100%;
+    }
+}
+
+.mapboxgl-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.mapboxgl-popup-content {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: unset;
+    top: 14px;
+    left: 81px;
+    color: red;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.mapboxgl-popup-tip {
+    display: none;
+}
+
+.index__profile--search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0px;
+
+    input {
+        padding: 8px;
+        width: 600px;
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        margin: 0px;
+    }
+
+    i {
+        margin-left: 1rem;
+    }
+}
+
+.index__address-all {
+    display: flex;
+    justify-content: flex-end;
+
+    i {
+        margin-left: 1rem;
+    }
+
+    .btn {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.index__profile--list__address {
+    position: relative;
+}
+
+.index__address-all--list {
+    position: absolute;
+    right: 0px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding-left: 0;
+    width: 300px;
+    z-index: 1;
+    margin-top: 10px;
+    display: none;
+    transform-origin: calc(100% - 20px) top;
+    animation: headernotifyhigher ease-in 0.2s;
+    will-change: opacity, transform;
+
+    @keyframes headernotifyhigher {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    &::before {
+        position: absolute;
+        top: -18px;
+        right: 26px;
+        content: "";
+        border-style: solid;
+        border-width: 9px 11px;
+        border-color: transparent transparent var(--white-color) transparent;
+    }
+
+    .index__address-all--list-item {
+        padding: 17px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        // margin: 11px 0px;
+        font-size: 1.3rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        i {
+            position: absolute;
+            right: 24px;
+            cursor: pointer;
+            font-size: 1.2rem;
+
+            &:hover {
+                color: tomato;
+            }
+        }
+
+        span {
+            width: 87%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 2rem;
+            max-height: 4rem;
+            overflow: hidden;
+        }
+    }
+}
+
+.index__address-all--list.show {
+    display: block;
+}

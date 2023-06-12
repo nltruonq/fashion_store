@@ -1,0 +1,82 @@
+.col {
+    .rdt_Pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+    .kCmZOV {
+        overflow-x: hidden;
+    }
+
+    .sc-dmRaPn {
+        right: 9px;
+        .btn {
+            min-width: 42px;
+            width: 42px;
+            font-size: 1.1rem;
+            background-color: tomato;
+            color: white;
+            border: none;
+        }
+    }
+
+    .sc-ksZaOG {
+        display: none;
+    }
+
+    .sc-fnykZs {
+        display: none;
+    }
+
+    .sc-idiyUo {
+        .btn {
+            min-width: 42px;
+            width: 75px;
+            font-size: 1.1rem;
+            background-color: tomato;
+            color: white;
+            border: none;
+        }
+    }
+
+    .action--item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn {
+            margin-left: 1rem;
+        }
+    }
+
+    .bLyqNT {
+        // margin-left: 4rem;
+    }
+
+    .data-table-extensions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 2rem 1rem 2rem;
+
+        .data-table-extensions-filter {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input {
+                padding: 11px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    .gtQiQo {
+        margin-right: 6rem;
+    }
+    .data-table-extensions-action {
+        margin-right: 6rem;
+    }
+}

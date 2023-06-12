@@ -1,0 +1,207 @@
+.confirm-order {
+    display: flex;
+    justify-content: center;
+}
+
+.ovrly {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    opacity: 0.7;
+    z-index: 1000;
+    display: none;
+    animation: fadeOverlay 0.3s linear;
+    will-change: opacity, transform;
+}
+
+.confirm.show {
+    display: flex;
+}
+
+.ovrly.show {
+    display: block;
+}
+
+.confirm {
+    display: none;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    border: 3px solid #2ecc71;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    /* top: -500px; */
+    z-index: 1000;
+    opacity: 1;
+    justify-content: center;
+    animation: fadeChange 0.3s linear;
+    will-change: opacity, transform;
+    top: 10px;
+
+    .closed {
+        position: absolute;
+        right: 3rem;
+        font-size: 2.1rem;
+        font-weight: bolder;
+
+        &:hover {
+            color: tomato;
+            cursor: pointer;
+        }
+    }
+
+    .form--left {
+        flex: 1;
+        margin-right: 1rem;
+
+        .heading-confirm {
+        }
+
+        .form-group {
+            margin: 31px 0px;
+            align-items: center;
+
+            &__align {
+                label {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+            }
+
+            input {
+                padding: 10px 10px;
+                font-size: 1.3rem;
+                line-height: 2rem;
+                max-width: 70%;
+            }
+        }
+    }
+
+    .form--right {
+        flex: 1;
+        margin-left: 1rem;
+
+        .all--product {
+            text-align: start;
+
+            ul {
+                list-style: none;
+
+                li {
+                    font-size: 1.3rem;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 17px 0;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    span {
+                        color: tomato;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .product--pay {
+                display: flex;
+                justify-content: center;
+
+                .btn {
+                    margin: 0;
+                    width: 197px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeChange {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeOverlay {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 0.7;
+        transform: translateY(0px);
+    }
+}
+
+.ovrly,
+.confirm {
+    // display: none;
+}
+
+.payment {
+    // payment hover:bg-[#f7f7f7] min-h-[38px] border-[1px] border-[rgba(0,0,0,0.2)] p-[5px] mb-[10px] rounded-[3px]
+}
+.payment {
+    background-color: #f7f7f7;
+    min-height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+
+    label {
+        // className="text-[14px] font-[600] mb-[10px] cursor-pointer"
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        input {
+            // className="w-[13px] h-[13px] cursor-pointer"
+            width: 13px;
+            height: 13px;
+            cursor: pointer;
+        }
+        span {
+            // ml-[10px] font-[700]
+            margin-left: 10px;
+            font-weight: 700;
+        }
+    }
+}
+
+.payment_show {
+    height: 35px;
+    margin-top: 10px;
+}
+
+.payment_unshow {
+    // h-[0px] overflow-hidden
+    height: 0px;
+    overflow: hidden;
+}
+
+.customModal {
+    max-width: 700px;
+    border-radius: 10px;
+    width: 700px;
+    padding: 45px;
+    height: 500px;
+}
+.react-responsive-modal-closeButton {
+    width: unset !important;
+}

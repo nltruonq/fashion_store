@@ -1,0 +1,25 @@
+@use '../../../scss/' as *;
+.product-list {
+    .swiper-slide{
+        width: 18%;
+        @include tablet {
+            width: 30%;
+        }
+
+        @include mobile {
+            width: 40%;
+        }
+    }
+    .home__product--item{
+        width: 182px;
+        display: block;
+
+        @include tablet {
+            width: 150px;
+        }
+
+        @include mobile {
+            width: 125px;
+        }
+    }
+}

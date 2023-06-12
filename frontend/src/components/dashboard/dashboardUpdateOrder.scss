@@ -1,0 +1,24 @@
+.select-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    select {
+        cursor: pointer;
+        padding: 0.5vmax 2vmax;
+        margin: 2rem 0;
+        width: 199px;
+        box-sizing: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.267);
+        border-radius: 4px;
+        outline: none;
+        font-size: 1.3rem;
+    }
+    .btn{
+        min-width: 199px;
+        &:hover{
+            background-color: tomato;
+            color: white;
+        }
+    }
+}

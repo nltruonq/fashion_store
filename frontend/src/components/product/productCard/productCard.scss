@@ -1,0 +1,183 @@
+
+.home__product--item{
+    position: relative;
+    background-color: var(--white-color);
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.05) ;
+    transition: transform ease-in 0.1s;
+    will-change: transform;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+.home__product--item:hover{
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(0 0 0 / 0.065);
+    transform: translateY(-1px);
+}
+.home__product--item-img{
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:top center;
+    border-radius: 2px;
+}
+.home__product--item-name{
+    font-size:1.3rem;
+    font-weight: 400;
+    color:var(--text-color);
+    line-height: 1.8rem;
+    margin: 10px 10px 9px;
+    height:3.6rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+}
+.home__product--item-price{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    line-height: 1.6rem;
+    justify-content: space-between;
+    height: 3.2rem;
+}
+.home__product--item-price-old{
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    font-weight: 350;
+    color:#555;
+    margin-left: 10px;
+}
+.home__product--item-price-current{
+    font-size: 1.3rem;
+    font-weight: 450;
+    color:var(--mainestt-color);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.home__product--item-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 7px;
+}
+.home__product--item-like{
+    font-size: 1.2rem;
+    color:red;
+    margin: 7px 10px 10px;
+}
+i.home__product--item-like--full
+{
+    display: none;
+}
+.home__product--item-like--liked .home__product--item-like--full
+{
+    display: inline-block;
+}
+.home__product--item-like--liked .home__product--item-like--empty{
+    display: none;
+}
+.home__product--item-rating{
+    font-size: 1rem;
+    transform: scale(0.7);
+    transform-origin: right;
+    margin-right: 7px;
+    color:#999;
+    margin-left: auto;
+}
+.home__product--item-rated
+{
+    color:rgb(255,206,61);
+}
+.home__product--item-sold
+{
+    margin-right: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--black-color);
+}
+.home__product--item-origin{
+    display: flex;
+    align-items: center;
+    margin: 1px 10px 0px;
+    font-size: 1.2rem;
+    font-weight: 301;
+    color: black;
+}
+.home__product--item-brand{
+    margin-right: auto;
+}
+.home__product--item-favourite{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color:var(--mainestt-color);
+    top:11px;
+    left:-4px;
+    background-color: currentColor;
+    line-height: 1.5rem;
+    border-top-right-radius:2px;
+    border-bottom-right-radius:2px;
+    font-weight: 499;
+}
+.home__product--item-favourite i{
+    margin-left: 4px;
+}
+.home__product--item-favourite::after
+{
+    position: absolute;
+    content:"";
+    border-top: 3px solid currentColor;
+    border-left:3px solid transparent;
+    top: 15px;
+    left:0px;
+    filter: brightness(60%);
+}
+.home__product--item-favourite-love
+{
+    color:var(--white-color);
+}
+.home__product--item-favourite-plus
+{
+    color:var(--white-color);
+    margin-right:6px;
+}
+.home__product--item-sale-off{
+    position: absolute;
+    width:37px;
+    height:34px;
+    top: 0;
+    right:0;
+    color:rgba(255,216,57,0.91);
+    background-color:currentColor;
+    text-align: center;
+}
+.home__product--item-sale-off::after
+{
+    position: absolute;
+    border-width:0px 18.5px 5px;
+    border-style:solid;
+    color:rgba(255,216,57,0.91);
+    border-color:transparent currentColor transparent currentColor;
+    bottom: -5px;
+    left:0px;
+    content:"";
+
+}
+.home__product--item-sale-off--percent{
+    display: block;
+    font-size:1.3rem;
+    color:var(--mainestt-color);
+    font-weight: 570;
+    position: relative;
+    top: 1.6px;
+}
+.home__product--item-sale-off--lable{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 603;
+    color: var(--white-color);
+}

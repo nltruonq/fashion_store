@@ -1,0 +1,21 @@
+.order_active {
+    border-bottom: 2px solid black;
+    // ? "border-b-[2px] border-b-solid border-black"
+}
+.order_noactive {
+    border-color: white;
+}
+
+.notification_hover {
+    // className={`rounded-[5px] hover:bg-[rgba(0,0,0,0.1)] notification p-[20px] flex justify-start items-center`}
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: unset !important;
+}
+
+.notification_hover:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

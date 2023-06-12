@@ -1,0 +1,41 @@
+.fake__height{
+    min-height: 745px;
+}
+.product__wrap{
+    padding-top: 140px;
+    .say__hi{
+        font-size: 1.3rem;
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+    .control--account {
+        .control--account__heading {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 1.5rem 0px;
+        }
+    
+        &__list {
+            list-style: none;
+    
+            &--item {
+                padding: 10px 0px;
+    
+                a {
+                    font-size: 1.3rem;
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 590;
+
+                    &:hover {
+                        color:tomato;
+                    }
+                }
+                .show--active{
+                    color:red;
+                }
+            }
+        }
+    }
+}

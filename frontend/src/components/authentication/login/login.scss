@@ -1,0 +1,140 @@
+@use '../../../scss/'as *;
+
+.login-screen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14%;
+    padding-bottom: 5.5%;
+
+    &__form {
+        margin: 0px 12px 12px;
+        width: 480px;
+        padding: 1.5rem;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        background: #fff;
+        border-radius: 10px;
+
+        input {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 4px 9px;
+            width: 324px;
+            color: black;
+            font-weight: 590;
+            font-size: 1.25rem;
+
+            &::placeholder {
+                font-size: 0.7rem;
+                font-weight: 500;
+                color: #877;
+            }
+        }
+
+        input:focus {
+            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+
+        label {
+
+            margin-bottom: 0.7rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 21px;
+        }
+
+        &__title {
+            font-size: 1.9rem;
+            font-weight: 650;
+            text-align: center;
+            margin-bottom: 2.4rem;
+        }
+
+        .form-group {
+            margin: 1.9rem 0px 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__align {
+                text-align: start;
+                margin-bottom: 1.7rem;
+                width: 100%;
+
+                label {
+                    font-size: 1.3rem;
+                }
+            }
+
+            input {
+                padding: 11px 9px;
+                width: 337px;
+
+                &::placeholder {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .form-group,
+        .form-group-remaining {
+            text-align: center;
+        }
+
+        .form-submit {
+            display: flex;
+            justify-content: center;
+
+            .btn {
+                border-radius: 8px;
+                margin-top: 1rem;
+                width: 324px;
+                font-weight: 600;
+                transition: color .3s ease, background-color .3s ease;
+
+                &:hover {
+                    background-color: tomato;
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+
+        .form-group-remaining {
+            width: 100%;
+            margin: 1.4rem 0px 0.7rem;
+        }
+
+
+    }
+
+    .login-screen__forgotpassword {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: red;
+        margin-top: 2.2rem;
+        display: block;
+    }
+
+    .login-screen__forgotpassword:hover {
+        text-decoration: underline;
+    }
+
+    .login-screen__subtext {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0px;
+
+        a {
+            margin-left: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: red;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

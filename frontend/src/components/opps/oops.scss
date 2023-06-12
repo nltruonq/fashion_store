@@ -1,0 +1,23 @@
+.page__notfound{
+    padding-top: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 740px;
+    flex-direction: column;
+
+    img{
+        width: 600px;
+    }
+    a{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: black;
+        margin-top: 2rem;
+        &:hover{
+            background-color: tomato;
+            color: white;
+        }
+    }
+}
